@@ -9,4 +9,6 @@
 * Необходимо написать 3 теста для проверки
   
 * оригинальный текст [задачи](https://leetcode.com/problems/palindrome-number/)
-![img.png](img.png)
+
+![img.png](Example1.png)
+![img_1.png](Example2.png)
