@@ -1,30 +1,27 @@
 package classes.main;
 
-import java.util.Collections;
+import java.util.ArrayList;
 
 public class Main {
 
+    //fsdkjfdsjkfldfslk
+    /*
+        kfds;ldkf;ldskf;ldskf;dslkfds;lfk
+    */
+
+
     public static void main(String[] args) {
-        Counter counter = new Counter(0);
+        System.out.println("Current value %");
 
-        Counter counter1 = new CounterIncrementTwo(0);
+        short i = 0;
+        int q = i;
+        i = (short) q;
 
-        System.out.println(counter1.toString());
 
-        CounterAggregation counterAggregation = new CounterAggregation(
-                Collections.emptyList()
-        );
+        Integer int1 = null;// = new Integer(1);
+        if(int1 != null && int1.toString().isEmpty() ){
 
-        counterAggregation.initCounterAggregation(counter, counter, counter);
-
-        System.out.println(String.format("Current value %s", counter.getNextElement()));
-
-        changeReferenceOnCounter(counter);
-
-        System.out.println(String.format("Current value %s", counter.getNextElement()));
+        }
     }
 
-    private static void changeReferenceOnCounter(Counter counter) {
-        counter = new Counter(0);
-    }
 }
