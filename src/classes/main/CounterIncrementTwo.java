@@ -2,11 +2,13 @@ package classes.main;
 
 public class CounterIncrementTwo extends Counter {
 
+    private int j = 0;
+
     public CounterIncrementTwo(int i) {
         super(i);
     }
 
-    @Override
+   @Override
     public int getNextElement() {
         i = i + 2;
         return i;
