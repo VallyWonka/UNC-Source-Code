@@ -10,6 +10,6 @@ public class MatrixImpl implements Matrix{
 
     @Override
     public int getElement(int i, int j) {
-        return matrix[i][i];
+        return matrix[i][j];
     }
 }
