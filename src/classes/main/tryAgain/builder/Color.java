@@ -10,4 +10,13 @@ public class Color {
         this.green = green;
         this.blue = blue;
     }
+
+    @Override
+    public String toString() {
+        return "Color{" +
+                "red=" + red +
+                ", green=" + green +
+                ", blue=" + blue +
+                '}';
+    }
 }

@@ -6,4 +6,11 @@ public class Engine {
     public Engine(int size) {
         this.size = size;
     }
+
+    @Override
+    public String toString() {
+        return "Engine{" +
+                "size=" + size +
+                '}';
+    }
 }
