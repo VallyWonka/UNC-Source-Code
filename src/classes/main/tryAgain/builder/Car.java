@@ -5,6 +5,12 @@ public class Car {
     private Wheels wheels;
     private Color color;
 
+    private Car(Engine engine, Wheels wheels, Color color) {
+        this.engine = engine;
+        this.wheels = wheels;
+        this.color = color;
+    }
+
 
     public Engine getEngine() {
         return engine;
@@ -37,5 +43,33 @@ public class Car {
                 ", wheels=" + wheels +
                 ", color=" + color +
                 '}';
+    }
+
+    public static class CarBuilder {
+
+        private Engine engine;
+        private Wheels wheels;
+        private Color color;
+
+        public CarBuilder buildEngine(Engine engine){
+            this.engine = engine;
+            return this;
+        }
+
+        public CarBuilder buildWheels(Wheels wheels){
+            this.wheels = wheels;
+            return this;
+        }
+
+        public CarBuilder buildColor(Color color){
+            this.color = color;
+            return this;
+        }
+
+        public Car build(){
+            if(engine == null || wheels == null || color == null)
+                return null;
+            return new Car(engine, wheels, color);
+        }
     }
 }
