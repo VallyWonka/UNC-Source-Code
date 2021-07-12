@@ -24,3 +24,4 @@ out/
 *.gz
 
 **/.flattened-pom.xml
+*.class
