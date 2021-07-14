@@ -6,6 +6,9 @@ public class Main {
         Singleton singleton = Singleton.getInstance();
         singleton.setState("First Call");
 
+        String string = String.valueOf(1);
+        string.charAt(1);
+
         Singleton singleton1 = Singleton.getInstance();
 
         System.out.println(singleton1);

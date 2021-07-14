@@ -2,6 +2,7 @@ package classes.main.primitives;
 
 import java.util.ArrayList;
 
+
 public class Main {
     public static void main(String[] args) {
         Integer int1 = new Integer(1);
