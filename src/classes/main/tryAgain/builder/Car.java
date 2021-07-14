@@ -5,12 +5,13 @@ public class Car {
     private Wheels wheels;
     private Color color;
 
-    private Car(Engine engine, Wheels wheels, Color color) {
+    protected Car(Engine engine, Wheels wheels, Color color) {
         this.engine = engine;
         this.wheels = wheels;
         this.color = color;
     }
 
+    public void move(){}
 
     public Engine getEngine() {
         return engine;

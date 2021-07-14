@@ -1,9 +1,6 @@
 package classes.main.tryAgain;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 import static classes.main.tryAgain.Constants.*;
 
@@ -23,6 +20,10 @@ public class Main {
 
         System.out.println(parent.parentFlag);
         System.out.println(parent.grandParentFlag);
+
+        List<Integer> list = new ArrayList<Integer>();
+        list = new LinkedList();
+
 
 
         new Printer() {
