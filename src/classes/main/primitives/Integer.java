@@ -11,6 +11,11 @@ public class Integer implements Comparable {
     }
 
     @Override
+    public int hashCode() {
+        return 0;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
 
@@ -25,6 +30,13 @@ public class Integer implements Comparable {
         if (o == null || getClass() != o.getClass()) return 0;
         Integer integer = (Integer) o;
         return java.lang.Integer.compare(this.value, integer.value);
+    }
+
+    @Override
+    public String toString() {
+        return "Integer{" +
+                "value=" + value +
+                '}';
     }
 }
 

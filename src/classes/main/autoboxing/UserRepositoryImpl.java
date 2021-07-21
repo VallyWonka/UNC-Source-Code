@@ -22,9 +22,9 @@ public class UserRepositoryImpl implements UserRepository<User>{
         List<Long> values = new ArrayList<Long>(dataBase.keySet());
         Collections.sort(values);
         if(limit < values.size()){
-            return values.subList(0, limit);
+            return null;
         }
-        return values;
+        return null;
     }
 
     public List<User> getElementsOrderedByKeys(int limit){
@@ -32,6 +32,6 @@ public class UserRepositoryImpl implements UserRepository<User>{
         for (Map.Entry<Long, User> entry:dataBase.entrySet()) {
             result.add(entry.getValue());
         }
-        return result.
+        return result;
     }
 }
