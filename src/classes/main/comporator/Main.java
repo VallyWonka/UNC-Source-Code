@@ -23,7 +23,7 @@ public class Main {
         }
 
         System.out.println(Arrays.stream(inputtedArray).max().orElse(0));
-
+        System.out.println(1 << 4);
 
         Map<String, Map<String, Integer>> shopHistory = new TreeMap();
 
