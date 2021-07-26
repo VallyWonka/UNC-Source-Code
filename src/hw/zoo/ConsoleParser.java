@@ -79,7 +79,7 @@ public class ConsoleParser {
                 case "log" -> this.zoo.getHistory().forEach(System.out::println);
                 case "exit" -> {
                     System.out.println("Looking forward to seeing you again!");
-                    System.exit(1);
+                    System.exit(0);
                 }
                 default -> System.out.println("Sorry, I couldn't understand you. Available commands are: " +
                         "info, check-in, check-on, check-out, build, log, and exit.");

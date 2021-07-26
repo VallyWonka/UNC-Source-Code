@@ -24,6 +24,7 @@ public class ConfigParser {
             Integer capacity = Integer.parseInt(scanner.next().trim());
             cageHashMap.put(number, new CageImpl(species, area, capacity));
         }
+        scanner.close();
         return cageHashMap;
     }
 
