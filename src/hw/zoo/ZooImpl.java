@@ -63,8 +63,8 @@ public class ZooImpl implements Zoo {
         return this.inhabitants.size();
     }
 
-    public void buildCage(Species species, Double area, Integer capability) {
-        this.cages.put(this.cages.size(), new CageImpl(species, area, capability));
+    public void buildCage(Species species, Double area, Integer capacity) {
+        this.cages.put(this.cages.size(), new CageImpl(species, area, capacity));
     }
 
     private Map.Entry<Animal, Integer> findAnimalByName(String animalName) {
@@ -127,7 +127,7 @@ public class ZooImpl implements Zoo {
         if (cage.getInhabitants().size() > 1) {
             info.append(String.format(" with %d (out of %d) other animal(s):",
                     cage.getInhabitants().size() - 1,
-                    cage.getCapability() - 1));
+                    cage.getCapacity() - 1));
             for (Animal neighbour: cage.getInhabitants()) {
                 if (!neighbour.getName().equals(animalName)) {
                     info.append(String.format(" %s,", neighbour.getName()));

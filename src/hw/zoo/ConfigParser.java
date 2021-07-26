@@ -21,8 +21,8 @@ public class ConfigParser {
             Integer number = Integer.parseInt(scanner.next().trim());
             Species species = AnimalFactory.checkSpecies(scanner.next().trim());
             Double area = Double.parseDouble(scanner.next().trim());
-            Integer capability = Integer.parseInt(scanner.next().trim());
-            cageHashMap.put(number, new CageImpl(species, area, capability));
+            Integer capacity = Integer.parseInt(scanner.next().trim());
+            cageHashMap.put(number, new CageImpl(species, area, capacity));
         }
         return cageHashMap;
     }

@@ -6,14 +6,14 @@ import java.util.List;
 public class CageImpl implements Cage, Condition {
     private Species species;
     private Double area;
-    private Integer capability;
+    private Integer capacity;
     private List<Animal> inhabitants;
 
-    public CageImpl(Species species, Double area, Integer capability) {
+    public CageImpl(Species species, Double area, Integer capacity) {
         this.species = species;
         this.area = area;
-        this.capability = capability;
-        this.inhabitants = new ArrayList<>(capability);
+        this.capacity = capacity;
+        this.inhabitants = new ArrayList<>(capacity);
     }
 
     @Override
@@ -26,17 +26,17 @@ public class CageImpl implements Cage, Condition {
         return this.area;
     }
 
-    public Integer getCapability() {
-        return this.capability;
+    public Integer getCapacity() {
+        return this.capacity;
     }
 
     public Integer countVacant() {
-        return this.capability - this.inhabitants.size();
+        return this.capacity - this.inhabitants.size();
     }
 
     @Override
     public boolean isVacantCage() {
-        return (this.capability  - this.inhabitants.size()) > 0;
+        return this.countVacant() > 0;
     }
 
     public List<Animal> getInhabitants() {

@@ -69,10 +69,10 @@ public class ConsoleParser {
                         System.out.println("Successfully built a new Cage! We are grateful for your contribution.");
                     } catch (IllegalArgumentException e) {
                         System.out.println("Please make sure you provided the correct species, area " +
-                                "and capability of the Cage you want to build in the given order.");
+                                "and capacity of the Cage you want to build in the given order.");
                     } catch (IndexOutOfBoundsException e) {
                         System.out.println("Please make sure that you provided both the species, the area " +
-                                "and the capability of the Cage you want to build.");
+                                "and the capacity of the Cage you want to build.");
                     }
                 }
 
