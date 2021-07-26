@@ -1,10 +1,9 @@
 package hw.zoo.model;
 
-import java.util.List;
 
 /**
- * class provide information about who can placed in Cage
+ * class provides information about who can be placed in a Cage
  */
 public interface Condition {
-    List<Species> isAvailableFor();
+    Species isAvailableFor();
 }

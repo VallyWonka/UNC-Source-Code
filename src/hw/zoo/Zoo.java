@@ -5,14 +5,17 @@ import hw.zoo.model.Animal;
 import java.util.List;
 
 /**
- * entity keep state of Zoo and provide service desk functionality
- * @checkInAnimal method add Animal to Zoo
- * should throw exception when Zoo can't provide place
- * @checkOutAnimal method remove Animal from Zoo
- * @getHistory - method show log of check in and check out
+ * entity to keep state of the Zoo and provide service desk functionality
+ *
+ * @checkInAnimal method adds an Animal to the Zoo
+ * should throw an exception when the Zoo can't provide a place
+ * @checkOutAnimal method removes an Animal from the Zoo
+ * @getHistory method shows log records of checking in and checking out
  */
 public interface Zoo {
-    void checkInAnimal(Animal animal);
-    void checkOutAnimal(Animal animal);
+    void checkInAnimal(Animal animal) throws CloneNotSupportedException, IllegalAccessException;
+
+    void checkOutAnimal(String animalName);
+
     List<InhibitionLog> getHistory();
 }

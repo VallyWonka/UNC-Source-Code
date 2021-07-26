@@ -9,15 +9,18 @@ public class InhibitionLog {
     private Date checkOutDate;
     private Species animalSpecies;
     private String animalName;
+    private int cageID;
 
     public InhibitionLog(final Date checkInDate,
                          final Date checkOutDate,
                          final Species animalSpecies,
-                         final String animalName) {
+                         final String animalName,
+                         final int cageID) {
         this.checkInDate = checkInDate;
         this.checkOutDate = checkOutDate;
         this.animalSpecies = animalSpecies;
         this.animalName = animalName;
+        this.cageID = cageID;
     }
 
     public Date getCheckInDate() {
@@ -28,6 +31,10 @@ public class InhibitionLog {
         return checkOutDate;
     }
 
+    public void setCheckOutDate(Date date) {
+        this.checkOutDate = date;
+    }
+
     public Species getAnimalSpecies() {
         return animalSpecies;
     }
@@ -36,11 +43,16 @@ public class InhibitionLog {
         return animalName;
     }
 
+    public int getCageNumber() {
+        return cageID;
+    }
+
     @Override
     public String toString() {
         return "InhibitionLog{" +
                 "checkInDate=" + checkInDate +
                 ", checkOutDate=" + checkOutDate +
+                ", cageID=" + cageID +
                 ", animalSpecies=" + animalSpecies +
                 ", animalName='" + animalName + '\'' +
                 '}';
