@@ -84,7 +84,7 @@ public class ZooImpl implements Zoo {
         }
         boolean cageFound = false;
         for (Map.Entry<Integer, CageImpl> cage : this.cages.entrySet()) {
-            if (cage.getValue().isAvailableFor().equals(animal.getSpecies()) & cage.getValue().isVacantCage()) {
+            if (cage.getValue().isAvailableFor().equals(animal.getSpecies()) && cage.getValue().isVacantCage()) {
                 cageFound = true;
                 cage.getValue().moveIn(animal);
                 this.inhabitants.put(animal, cage.getKey());
@@ -119,7 +119,7 @@ public class ZooImpl implements Zoo {
         StringBuilder info = new StringBuilder();
         info.append(String.format("The %s %s has moved in here %s and is now living their best life " +
                         "in cage %d of area %.2f",
-                inhabitant.getKey().getSpecies().toString().toLowerCase(),
+                animal.getSpecies().toString().toLowerCase(),
                 animalName,
                 log.getCheckInDate(),
                 inhabitant.getValue(),
