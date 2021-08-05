@@ -36,7 +36,7 @@ public class Main {
         userRepository.save(new User(30L, "name2", "name20"));
 
 
-        userRepository.getElementsOrderedBy(5).forEach(System.out::println);
+        userRepository.getElementsOrderedByKeys(5).forEach(System.out::println);
 
     }
 }
