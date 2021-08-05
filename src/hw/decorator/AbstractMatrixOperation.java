@@ -9,22 +9,14 @@ public abstract class AbstractMatrixOperation implements Matrix {
     public String toString() {
         List<List<Integer>> matrix = new ArrayList<>();
 
-        for (int i = 0;; i++) {
-            try {
-                this.getElement(i, 0);
-            } catch (IndexOutOfBoundsException reachedLastRow) {
-                break;
-            }
+        for (int i = 0; i < this.getM(); i++) {
+            this.getElement(i, 0);
 
             matrix.add(new ArrayList<>());
 
-            for (int j = 0;; j++) {
-                try {
-                    int elem = this.getElement(i, j);
-                    matrix.get(i).add(elem);
-                } catch (IndexOutOfBoundsException reachedLastColumn) {
-                    break;
-                }
+            for (int j = 0; j < this.getN(); j++) {
+                int elem = this.getElement(i, j);
+                matrix.get(i).add(elem);
             }
         }
 

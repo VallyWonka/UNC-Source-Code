@@ -9,6 +9,16 @@ public class TransposeMatrix extends AbstractMatrixOperation implements Matrix {
     }
 
     @Override
+    public int getN() {
+        return this.matrix.getM();
+    }
+
+    @Override
+    public int getM() {
+        return this.matrix.getN();
+    }
+
+    @Override
     public int getElement(int i, int j) throws ArrayIndexOutOfBoundsException {
         return this.matrix.getElement(j, i);
     }

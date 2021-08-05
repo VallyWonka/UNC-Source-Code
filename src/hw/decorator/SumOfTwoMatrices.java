@@ -11,6 +11,16 @@ public class SumOfTwoMatrices extends AbstractMatrixOperation implements Matrix 
     }
 
     @Override
+    public int getN() {
+        return this.leftMatrix.getN();
+    }
+
+    @Override
+    public int getM() {
+        return this.leftMatrix.getN();
+    }
+
+    @Override
     public int getElement(int i, int j) throws ArrayIndexOutOfBoundsException {
         return this.leftMatrix.getElement(i, j) + this.rightMatrix.getElement(i, j);
     }

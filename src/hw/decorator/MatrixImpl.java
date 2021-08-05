@@ -18,6 +18,16 @@ public class MatrixImpl implements Matrix{
     }
 
     @Override
+    public int getN() {
+        return this.matrix[0].length;
+    }
+
+    @Override
+    public int getM() {
+        return this.matrix.length;
+    }
+
+    @Override
     public String toString() {
         List<String> matrixRows = new ArrayList<>();
 
