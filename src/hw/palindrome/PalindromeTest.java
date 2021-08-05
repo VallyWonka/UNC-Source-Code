@@ -24,6 +24,15 @@ public class PalindromeTest {
     }
 
     @Test
+    public void getCorrectResultNumericalDigits() {
+        PalindromeNumber palindromeNumber = new PalindromeNumber();
+
+        boolean actualResult = palindromeNumber.isPalindrome(9);
+
+        Assert.assertTrue(actualResult);
+    }
+
+    @Test
     public void getCorrectFalseResult() {
         PalindromeNumber palindromeNumber = new PalindromeNumber();
 
