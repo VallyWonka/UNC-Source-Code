@@ -9,7 +9,7 @@ public class CommandFactoryDirector {
                 this.zoo = zoo;
         }
 
-        public Command getCommandExecutor(String command) {
+        private Command getCommandExecutor(String command) {
                 return switch (command) {
                         case "info" -> new InfoCommand(this.zoo);
                         case "check-in" -> new CheckInCommand(this.zoo);
@@ -18,8 +18,12 @@ public class CommandFactoryDirector {
                         case "build" -> new BuildCommand(this.zoo);
                         case "log" -> new LogCommand(this.zoo);
                         case "exit" -> new ExitCommand();
-                        default -> throw new IllegalArgumentException("Sorry, I couldn't understand you. Available commands are: " +
-                                "info, check-in, check-on, check-out, build, log, and exit.");
+                        default -> throw new IllegalArgumentException("Sorry, I couldn't understand you. " +
+                                "Available commands are: info, check-in, check-on, check-out, build, log, and exit.");
                 };
+        }
+
+        public void executeCommand(String[] tokens) {
+                this.getCommandExecutor(tokens[0]).executeCommand(tokens);
         }
 }

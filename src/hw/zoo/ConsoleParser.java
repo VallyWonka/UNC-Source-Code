@@ -34,7 +34,7 @@ public class ConsoleParser {
         while (this.scanner.hasNextLine()) {
             String[] tokens = this.parse(this.scan());
             try {
-                this.commandFactoryDirector.getCommandExecutor(tokens[0]).executeCommand(tokens);
+                this.commandFactoryDirector.executeCommand(tokens);
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
