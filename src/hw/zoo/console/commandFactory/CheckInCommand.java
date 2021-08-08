@@ -1,4 +1,4 @@
-package hw.zoo.commandFactory;
+package hw.zoo.console.commandFactory;
 
 import hw.zoo.ZooImpl;
 import hw.zoo.model.Animal;

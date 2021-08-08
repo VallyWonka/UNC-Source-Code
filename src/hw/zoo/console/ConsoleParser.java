@@ -1,8 +1,7 @@
-package hw.zoo;
+package hw.zoo.console;
 
-import hw.zoo.commandFactory.CommandFactoryDirector;
-import hw.zoo.model.Animal;
-import hw.zoo.model.AnimalFactory;
+import hw.zoo.ZooImpl;
+import hw.zoo.console.commandFactory.CommandFactoryDirector;
 
 import java.util.Scanner;
 

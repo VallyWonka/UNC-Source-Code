@@ -1,10 +1,11 @@
 package hw.zoo;
 
+import hw.zoo.logging.InhibitionLog;
+import hw.zoo.logging.ZooLogger;
 import hw.zoo.model.Animal;
 import hw.zoo.model.CageImpl;
 import hw.zoo.model.Species;
 
-import java.io.FileNotFoundException;
 import java.util.*;
 
 public class ZooImpl implements Zoo {
@@ -12,15 +13,9 @@ public class ZooImpl implements Zoo {
     private Map<Integer, CageImpl> cages;
     private Map<Animal, Integer> inhabitants;
 
-    public ZooImpl() {
+    public ZooImpl(Map<Integer, CageImpl> cageHashMap) {
+        this.cages = cageHashMap;
         this.logger = new ZooLogger();
-
-        try {
-            this.cages = ConfigParser.readZooConfig("..\\..\\..\\..\\resources\\cages.txt");
-        } catch (FileNotFoundException e) {
-            this.cages = new HashMap<>();
-        }
-
         this.inhabitants = new HashMap<>();
     }
 
@@ -35,7 +30,7 @@ public class ZooImpl implements Zoo {
             if (countInhabitants() > 0) {
                 info.append("Here you can meet");
                 for (Animal inhabitant : this.inhabitants.keySet()) {
-                    info.append(String.format(" %s %s,",
+                            info.append(String.format(" %s %s,",
                             inhabitant.getSpecies().toString().toLowerCase(),
                             inhabitant.getName()));
                 }

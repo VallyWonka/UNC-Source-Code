@@ -1,5 +1,6 @@
 package hw.zoo;
 
+import hw.zoo.logging.InhibitionLog;
 import hw.zoo.model.Animal;
 
 import java.util.List;

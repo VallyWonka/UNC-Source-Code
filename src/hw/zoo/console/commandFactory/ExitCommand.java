@@ -1,4 +1,4 @@
-package hw.zoo.commandFactory;
+package hw.zoo.console.commandFactory;
 
 public class ExitCommand extends Command {
     @Override

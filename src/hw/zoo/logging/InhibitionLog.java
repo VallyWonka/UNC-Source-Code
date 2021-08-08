@@ -1,4 +1,4 @@
-package hw.zoo;
+package hw.zoo.logging;
 
 import hw.zoo.model.Species;
 
