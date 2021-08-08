@@ -20,8 +20,14 @@ public class Main {
             System.out.println("Commit");
             connection.commit();
         }
-        ResultSet resultSet = statement.executeQuery("select 1 tmp");
-        resultSet.next();
-        System.out.println(resultSet.getInt("tmp"));
+        ResultSet resultSet = statement.executeQuery("select * from TABLE1");
+        /*resultSet.next();
+        System.out.println(resultSet.getInt("id"));
+        System.out.println(resultSet.getString("value"));
+        */
+        while (resultSet.next()){
+            System.out.println(resultSet.getInt("id"));
+            System.out.println(resultSet.getString("value"));
+        }
     }
 }
